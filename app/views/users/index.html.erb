@@ -1,0 +1,11 @@
+<div class="container">
+	<h1> Liste des membres du Private Club </h1>
+	<ul>
+		<% @users.each do |user| %>
+			<li>
+				<%= user.first_name.capitalize %> <%= user.last_name.capitalize %>
+				<%= link_to "Voir", user_path(user) %>
+			</li>
+		<% end %>
+	</ul>
+</div>
